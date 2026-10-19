@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+shap
+h2o
+wfdb
+neurokit2
+jupyterlab
+ipykernel
