@@ -1,0 +1,96 @@
+,0
+Extrasystole couplets,0.16280185951230425
+Left atrial size (mm),0.14620801195269448
+Number of ventricular premature beats in 24h,0.08985111114937654
+Sodium (mEq/L),0.08439512734184969
+Prior Myocardial Infarction (yes=1),0.08036242462306589
+Pro-BNP (ng/L),0.0729156511406472
+"Q-waves (necrosis, yes=1)",0.06562374373121803
+Cardiothoracic ratio,0.045631138520548065
+Left ventricle end-diastolic diameter (mm),0.04365284024485536
+Left ventricle end-systolic diameter (mm),0.04300834628050623
+Right ventricle end-diastolic diameter (mm),0.040301596853775316
+cigarettes /year,0.03824284730459713
+Normalized Troponin,0.03618384510203512
+Left ventricular posterior wall thickness (mm),0.03578012616101958
+Glucose (mmol/L),0.031593547622226915
+PR interval (ms),0.028340493263385672
+Average RR (ms) [Holter],0.02388707159116163
+TSH (mIU/L),0.02344934651773652
+HDL (mmol/L),0.02115008823966486
+maximum RR (ms),0.019669860642503978
+Protein (g/L),0.018092814786844675
+ALT or GPT (IU/L),0.01663307610063683
+Total Cholesterol (mmol/L),0.015063612605141876
+Weight (kg),0.014665924365203822
+Signs of pulmonary venous hypertension (yes=1),0.013168979246984172
+QT interval (ms),0.013004517980258798
+SDNN (ms),0.011483025281449913
+Systolic blood pressure (mmHg),0.011190071207693076
+smoke-free time (years),0.01090626941125565
+Intraventricular conduction disorder,0.010770184696715002
+Hemoglobin (g/L),0.009871493304368978
+T4 (ng/L),0.009532493187483232
+Calcium channel blocker (yes=1),0.009122728096068974
+pNN50 (%),0.007446418551656533
+Gamma-glutamil transpeptidase (IU/L),0.006923821198445958
+Septal thickness (mm),0.006755995105928937
+minimum RR (ms),0.006470543256606657
+Body Mass Index (Kg/m2),0.004684197084619246
+Ventricular Extrasystole,0.004119749042729346
+Anticoagulants/antitrombotics (yes=1),0.003944134085941115
+LDL (mmol/L),0.003763404713292069
+Average RR (ms) [ECG],0.0036959318129750457
+Age,0.0032018716913928755
+LVEF (%),0.0031790412867848815
+Digoxin (yes=1),0.00241663550423252
+ACE inhibitor (yes=1),0.0022823606698996746
+Paroxysmal supraventricular tachyarrhythmia,0.002061509151644682
+Nitrovasodilator (yes=1),0.001907246031805676
+Height (cm),0.0014393076256358813
+T3 (pg/dL),0.0012374260592574928
+RMSSD (ms),0.0009869322091920591
+Creatinine (?mol/L),0.0009672195901657605
+daily smoking (cigarretes/day),0.0
+History of hypertension (yes=1),0.0
+Albumin (g/L),0.0
+Diastolic blood pressure (mmHg),0.0
+NYHA class,0.0
+Diabetes (yes=1),0.0
+HF etiology - Diagnosis,0.0
+History of dyslipemia (yes=1),0.0
+Peripheral vascular disease (yes=1),0.0
+Prior implantable device,0.0
+Gender (male=1),0.0
+AST or GOT (IU/L),0.0
+Syncope,0.0
+alcohol consumption (standard units),0.0
+Prior Revascularization,0.0
+Left ventricular hypertrophy (yes=1),0.0
+QT corrected,0.0
+QRS duration (ms),0.0
+QRS > 120 ms,0.0
+Troponin (ng/mL),0.0
+Potassium (mEq/L),0.0
+Urea (mg/dL),0.0
+Right ventricle contractility (altered=1),0.0
+Mitral valve insufficiency,0.0
+Mitral flow pattern,0.0
+Hig-resolution ECG available,0.0
+ECG rhythm,0.0
+Bradycardia,0.0
+Number of supraventricular premature beats in 24h,0.0
+Ventricular Tachycardia,0.0
+Non-sustained ventricular tachycardia (CH>10),0.0
+Holter rhythm,0.0
+Holter available,0.0
+RR range (ms),0.0
+SDANN (ms),0.0
+Angiotensin-II receptor blocker (yes=1),0.0
+Amiodarone (yes=1),0.0
+Diabetes medication (yes=1),0.0
+Betablockers (yes=1),0.0
+Spironolactone (yes=1),0.0
+Loop diuretics (yes=1),0.0
+Hidralazina (yes=1),0.0
+Statins (yes=1),0.0
