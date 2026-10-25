@@ -3,3 +3,15 @@ data/
 __pycache__/
 .ipynb_checkpoints/
 h2o_models/
+
+# 크고 다시 만들 수 있는 전처리 중간 결과 (코드로 재생성)
+# window_qc: 1단계 창 판정 94MB (1단계 노트북 1-5) / sqi_full: 3단계 708명 bSQI 281MB (3단계 노트북 3-4 ②)
+results/preprocess/window_qc/
+results/preprocess/sqi_full/
+results/preprocess/record_qc_partial.csv
+
+# 학습한 모델 파일
+*.pt
+
+# 작업 도구가 만든 임시 폴더
+notebooks/tmp/

@@ -7,5 +7,7 @@ shap
 h2o
 wfdb
 neurokit2
+joblib
+torch
 jupyterlab
 ipykernel
