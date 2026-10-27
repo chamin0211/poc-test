@@ -1,5 +1,12 @@
 # 인수인계: Holter v2 전처리·증강 → 구글 드라이브 업로드 (2026-10-27)
 
+> **가장 최신 (2026-10-27 저녁) — 아래 "최신 상태"보다 우선**
+> - **사용자 결정: 특징 계산(30초 조각 특징 28개, HRV)은 쓰지 않는다.** 필요한 건 정제된 파형 `.npy`(원본 445 + 증강본 890)뿐. 드라이브는 `ECG_tem_clean`만 채움. 학습 계획은 CNN + LSTM/Transformer(파형 직접 학습)
+> - 노트북 3 전체 실행은 **8명 처리 후 사용자 요청으로 중지함**. 만들다 만 결과가 남아 있음 → 다시 돌리기 전에 `/mnt/c/data/music/SCD_Holter_v2_pca/`(clean_signal, segment_features)와 `results/preprocess_swee/record_log.csv`를 지울 것
+> - **3유도를 섞는 기준이 결정 대기 중** (사용자에게 물어볼 것). 지금 코드는 첫 번째 주성분(전체 분산, 주로 QRS) = 근거 없는 자체 판단. 선택지: A 그대로 / B T파 기준 PCA(Ramírez 2017 JAHA, Palmieri 2021 BSPC 68:102719 — 저널 근거 있음, T파 위치 검출 필요) / C 섞지 않고 3유도 그대로 `.npy` 저장(약 105 GB, C: 여유 약 143 GB). Claude는 C를 가장 단순하다고 제안함. 섞는 결정(10-27)을 바꾸는 것이라 사용자 결정 필요
+> - QRS 기준 PCA 합치기의 저널 근거는 못 찾음 (Martens 2005는 학회 논문. Scientia Iranica 2011 Homaeinezhad는 PCA로 유도를 합쳤는지 확인 안 됨)
+> - 결정되면 노트북 3 수정: `segment_features`·CSV 저장·R파 검출(`nk.ecg_peaks`) 제거, `.npy` 저장만 남김 (환자 1명 1~2분 예상). 기준 표 6~10번은 "사용 안 함"으로 표시, 결정 기록에 추가
+
 > **최신 상태 (2026-10-27 16:50)**: 계획이 바뀌어 **학교 컴퓨터에서 실행 중**이다. 아래 4장의 "집에서" 순서는 학교 컴퓨터에서 이미 진행됨.
 > - 원본 Holter 936개 다시 받음 (`/mnt/c/data/music/Holter_ECG`, 크기 검사 통과, 크기가 다른 39개는 SHA256 일치)
 > - 노트북 1 실행 완료: 445명 / SCD 50명, `results/final_holter_ecg/cohort_final.csv` 생성
