@@ -1,0 +1,7 @@
+augmented_id,files_exist,fs_same,leads_same,gain_baseline_fmt_same,header_samples_ok,dat_size_ok,at_least_min_hours,inside_original,samples_same
+P0059-1,True,True,True,True,True,True,True,True,True
+P0059-2,True,True,True,True,True,True,True,True,True
+P0457-1,True,True,True,True,True,True,True,True,True
+P0457-2,True,True,True,True,True,True,True,True,True
+P0906-1,True,True,True,True,True,True,True,True,True
+P0906-2,True,True,True,True,True,True,True,True,True
