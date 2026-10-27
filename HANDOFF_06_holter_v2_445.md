@@ -1,5 +1,14 @@
 # 인수인계: Holter v2 전처리·증강 → 구글 드라이브 업로드 (2026-10-27)
 
+> **최신 상태 (2026-10-27 16:50)**: 계획이 바뀌어 **학교 컴퓨터에서 실행 중**이다. 아래 4장의 "집에서" 순서는 학교 컴퓨터에서 이미 진행됨.
+> - 원본 Holter 936개 다시 받음 (`/mnt/c/data/music/Holter_ECG`, 크기 검사 통과, 크기가 다른 39개는 SHA256 일치)
+> - 노트북 1 실행 완료: 445명 / SCD 50명, `results/final_holter_ecg/cohort_final.csv` 생성
+> - **neurokit2 0.2.12 → 0.2.13으로 올림 (pandas 3.1 → 2.3.3)**. 0.2.12는 numpy 2.5에서 `np.trapz`가 없어 HRV 주파수·비선형 계산이 전부 실패했음 (HRV 21개 100% 빈 값). 0.2.13으로 시험 환자 HRV 빈 값 0.2%
+> - 노트북 3: `N_JOBS = 8`(1명 최대 메모리 1.24 GB, 1명 약 12분)로 **전체 실행 중** (16:40 시작, 약 11시간 예상). `setsid nohup jupyter nbconvert --execute --inplace`로 따로 떨어진 프로세스라 VS Code를 닫아도 돎. 진행 확인: `results/preprocess_swee/record_log.csv` 줄 수 − 1 = 끝난 환자 수. 끊기면 노트북 3을 다시 실행하면 남은 환자부터 이어서 함
+> - 끝나면: ⑥ 출력 확인(전원 ok, `.npy`·CSV 1,335개씩, 짝 안 맞는 이름 없음) → 드라이브 README 작성 → 업로드 (5장)
+> - 참고: `HRV_SampEn`에 inf, 잡음 조각은 `HRV_SDNN`이 매우 큼. neurokit이 그대로 낸 값이고 Swee도 같음 → README에 적을 것
+> - 특징 CSV는 Swee의 MIL-TCN(딥러닝) 입력이다. 증강본 특징(`P0001-1.csv` 등)도 증강 학습에 필요해서 계산함
+
 다음 AI가 이어서 할 일: **집 컴퓨터에서 사용자가 노트북 1 → 3 (필요하면 2)을 실행하도록 안내하고, 결과를 팀 구글 드라이브에 올리는 것까지 돕기.** 모델 학습은 이 인수인계 범위가 아니다.
 
 ## 1. 사용자 작업 방식 (꼭 지킬 것)
@@ -44,7 +53,7 @@
    - `/mnt/c/data/music/subject-info.csv`, `/mnt/c/data/music/RECORDS`
    - `/mnt/c/data/music/Holter_ECG/*.hea, *.dat` (원본 Holter, PhysioNet MUSIC 1.0.1)
    - `results/final_holter_ecg/final_split.csv` (git에 있음)
-3. 파이썬 환경: `.venv`에 `requirements.txt` 설치. neurokit2 버전은 0.2.12 기준
+3. 파이썬 환경: `.venv`에 `requirements.txt` 설치. neurokit2 0.2.13 (pandas 2.x) 기준
 4. 디스크: C:에 약 40 GB 이상 여유 (`.npy` 약 35 GB + CSV)
 
 ### 1단계: 노트북 1 실행 (처음부터 끝까지)
